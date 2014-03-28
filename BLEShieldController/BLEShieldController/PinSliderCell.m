@@ -1,29 +1,30 @@
 //
-//  PinSwitchCell.m
+//  PinSliderCell.m
 //  BLEShieldController
 //
 //  Created by Hari Kunwar on 3/27/14.
 //  Copyright (c) 2014 Hari Kunwar. All rights reserved.
 //
 
-#import "PinSwitchCell.h"
+#import "PinSliderCell.h"
 
-@implementation PinSwitchCell
+@implementation PinSliderCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        _pinSwitch = [UISwitch new];
-        _pinSwitch.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
+        _pinSlider = [UISlider new];
+        _pinSlider.minimumValue = 0;
+        _pinSlider.maximumValue = 1023;
         
-        [_pinSwitch addTarget:self action:@selector(pinSwitched) forControlEvents:UIControlEventValueChanged];
+        [_pinSlider addTarget:self action:@selector(pinSliderValue) forControlEvents:UIControlEventValueChanged];
         
         _pinLabel = [[UILabel alloc] init];
         
         [self addSubview:_pinLabel];
-        [self addSubview:_pinSwitch];
+        [self addSubview:_pinSlider];
     }
     return self;
 }
@@ -36,17 +37,18 @@
     
     _pinLabel.frame = CGRectMake(x, y, width, height);
     
-    width = _pinSwitch.width;//default width
-    height = _pinSwitch.height;//default height
+    width = _pinSlider.width;//default width
+    height = _pinSlider.height;//default height
     x = self.width - width - 20.0f;
     y = _pinLabel.midY - height/2;
-    _pinSwitch.frame = CGRectMake(x, y, width, height);
-    
+    _pinSlider.frame = CGRectMake(x, y, width, height);
 }
 
-- (void)pinSwitched
+- (void)pinSliderValue
 {
-    [_delegate pin:_pin switchedOn:_pinSwitch.isOn];
+    NSNumber *number = [NSNumber numberWithFloat:_pinSlider.value];
+    
+    [_delegate pin:_pin sliderValue:[number integerValue]];
 }
 
 @end

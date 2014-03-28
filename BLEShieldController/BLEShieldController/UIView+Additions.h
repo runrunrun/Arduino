@@ -16,5 +16,9 @@
 - (CGFloat)right;
 - (CGFloat)top;
 - (CGFloat)bottom;
+- (CGFloat)midX;
+- (CGFloat)midY;
+
+- (void)showLayoutBorder;
 
 @end

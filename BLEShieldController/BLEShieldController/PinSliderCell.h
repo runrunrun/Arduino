@@ -1,5 +1,5 @@
 //
-//  PinSwitchCell.h
+//  PinSliderCell.h
 //  BLEShieldController
 //
 //  Created by Hari Kunwar on 3/27/14.
@@ -9,18 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Pin.h"
 
-@protocol PinSwitchDelegate <NSObject>
+@protocol PinSliderDelegate <NSObject>
 
-- (void)pin:(Pin *)pin switchedOn:(BOOL)switchedOn;
+- (void)pin:(Pin *)pin sliderValue:(NSInteger)value;
 
 @end
 
-@interface PinSwitchCell : UITableViewCell
+@interface PinSliderCell : UITableViewCell
 
-@property (nonatomic, weak) id<PinSwitchDelegate> delegate;
+@property (nonatomic, weak) id<PinSliderDelegate> delegate;
 @property (nonatomic, weak) Pin *pin;
 @property (nonatomic, strong) UILabel *pinLabel;
-@property (nonatomic, strong) UISwitch *pinSwitch;
+@property (nonatomic, strong) UISlider *pinSlider;
 @property (nonatomic, assign) NSInteger pinIdentifier;
+
 
 @end

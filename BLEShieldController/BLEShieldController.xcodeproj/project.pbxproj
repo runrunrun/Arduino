@@ -25,6 +25,8 @@
 		1EAA5FB218E522C70059A23F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA5FB018E522C70059A23F /* RootViewController.m */; };
 		1EAA5FB818E526180059A23F /* PinSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA5FB718E526180059A23F /* PinSwitchCell.m */; };
 		1EAA5FBB18E526C40059A23F /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA5FBA18E526C40059A23F /* UIView+Additions.m */; };
+		1EAA5FBE18E540040059A23F /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA5FBD18E540040059A23F /* Pin.m */; };
+		1EAA5FC118E555640059A23F /* PinSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA5FC018E555640059A23F /* PinSliderCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		1EAA5FB718E526180059A23F /* PinSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinSwitchCell.m; sourceTree = "<group>"; };
 		1EAA5FB918E526C40059A23F /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		1EAA5FBA18E526C40059A23F /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		1EAA5FBC18E540040059A23F /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
+		1EAA5FBD18E540040059A23F /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
+		1EAA5FBF18E555640059A23F /* PinSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinSliderCell.h; sourceTree = "<group>"; };
+		1EAA5FC018E555640059A23F /* PinSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinSliderCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,10 @@
 				1EAA5FB018E522C70059A23F /* RootViewController.m */,
 				1EAA5FB618E526180059A23F /* PinSwitchCell.h */,
 				1EAA5FB718E526180059A23F /* PinSwitchCell.m */,
+				1EAA5FBF18E555640059A23F /* PinSliderCell.h */,
+				1EAA5FC018E555640059A23F /* PinSliderCell.m */,
+				1EAA5FBC18E540040059A23F /* Pin.h */,
+				1EAA5FBD18E540040059A23F /* Pin.m */,
 				1EAA5FB918E526C40059A23F /* UIView+Additions.h */,
 				1EAA5FBA18E526C40059A23F /* UIView+Additions.m */,
 				1EAA5F8C18E5221E0059A23F /* Images.xcassets */,
@@ -271,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EAA5FBE18E540040059A23F /* Pin.m in Sources */,
 				1EAA5FAD18E522860059A23F /* BLE.m in Sources */,
 				1EAA5F8B18E5221E0059A23F /* AppDelegate.m in Sources */,
 				1EAA5FB118E522C70059A23F /* RootViewController.m in Sources */,
+				1EAA5FC118E555640059A23F /* PinSliderCell.m in Sources */,
 				1EAA5F8718E5221E0059A23F /* main.m in Sources */,
 				1EAA5FBB18E526C40059A23F /* UIView+Additions.m in Sources */,
 				1EAA5FB818E526180059A23F /* PinSwitchCell.m in Sources */,

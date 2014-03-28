@@ -40,4 +40,21 @@
     return CGRectGetMaxY(self.frame);
 }
 
+- (CGFloat)midX
+{
+    return CGRectGetMidX(self.frame);
+}
+
+- (CGFloat)midY
+{
+    return CGRectGetMidY(self.frame);
+}
+
+- (void)showLayoutBorder
+{
+    self.layer.borderWidth = 1.0f;
+    self.layer.borderColor = [[UIColor redColor] CGColor];
+}
+
+
 @end
