@@ -35,7 +35,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _tableView = [UITableView new];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -51,7 +51,6 @@
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
-    _tableView.frame = self.view.frame;
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,17 +64,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger numberOfRows = 1;
     
-    if (section == 0) {
+    if (section == 1) {
         numberOfRows = [_analogPinArray count];
     }
-    else if (section == 1) {
+    else if (section == 2) {
         numberOfRows = [_digitalPinArray count];
     }
     
@@ -92,27 +91,24 @@
     Pin *pin = nil;
     
     if (section == 0) {
-        pin = [_analogPinArray objectAtIndex:row];
-    }
-    else if (section == 1){
-        pin = [_digitalPinArray objectAtIndex:row];
-    }
-    
-    if (pin.type == kPinDigital) {
-        NSString *cellIdentifier = @"pinSwitchCell";
-        PinSwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        //add connect button
+        NSString *cellIdentifier = @"buttonCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         
         if (cell == nil) {
-            cell = [[PinSwitchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
             
+            UIButton *connectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            [connectButton setTitle:@"Connect" forState:UIControlStateNormal];
+            [connectButton addTarget:self action:@selector(connectBLE) forControlEvents:UIControlEventTouchUpInside];
+            connectButton.frame = cell.bounds;
+            [cell addSubview:connectButton];
         }
-        cell.pinLabel.text = pin.name;
-        cell.pinSwitch.on = pin.state;
-        cell.pin = pin;
-        cell.delegate = self;
+        
         tableCell = cell;
     }
-    else if (pin.type == kPinAnalog) {
+    else if (section == 1) {
+        pin = [_analogPinArray objectAtIndex:row];
         //create analog cell with sliders
         NSString *cellIdentifier = @"pinSliderCell";
         PinSliderCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -123,6 +119,21 @@
         }
         cell.pinLabel.text = pin.name;
         cell.pinSlider.value = pin.value;
+        cell.pin = pin;
+        cell.delegate = self;
+        tableCell = cell;
+    }
+    else if (section == 2){
+        pin = [_digitalPinArray objectAtIndex:row];
+        NSString *cellIdentifier = @"pinSwitchCell";
+        PinSwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (cell == nil) {
+            cell = [[PinSwitchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            
+        }
+        cell.pinLabel.text = pin.name;
+        cell.pinSwitch.on = pin.state;
         cell.pin = pin;
         cell.delegate = self;
         tableCell = cell;
@@ -141,10 +152,10 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *title = @"";
-    if (section == 0) {
+    if (section == 1) {
         title = @"Analog Pins";
     }
-    else if (section == 1) {
+    else if (section == 2) {
         title = @"Digital Pins";
     }
     
@@ -153,14 +164,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 50;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 50;
 }
-
 
 #pragma mark - PinSwitchDelegate
 #pragma mark -
@@ -178,5 +188,10 @@
     pin.value = value;
 }
 
+
+- (void)connectBLE
+{
+    
+}
 
 @end
