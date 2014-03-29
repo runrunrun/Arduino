@@ -22,7 +22,7 @@ typedef enum PinState {
 
 @property (nonatomic, assign) PinType  type;
 @property (nonatomic, assign) PinState state;//Digital State
-@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, assign) NSInteger identifier;//pin identifier
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) NSInteger value;//Analog value
 
