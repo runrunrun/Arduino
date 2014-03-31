@@ -21,6 +21,7 @@
 		1EAA5FFE18E7B8B50059A23F /* RobotDriveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA5FFD18E7B8B50059A23F /* RobotDriveTests.m */; };
 		1EAA600918E7B8C90059A23F /* DriveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA600818E7B8C90059A23F /* DriveViewController.m */; };
 		1EAA600C18E7BB0E0059A23F /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA600B18E7BB0E0059A23F /* UIView+Additions.m */; };
+		1EAA601118E7C7B80059A23F /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA600F18E7C7B80059A23F /* BLE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		1EAA600818E7B8C90059A23F /* DriveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveViewController.m; sourceTree = "<group>"; };
 		1EAA600A18E7BB0E0059A23F /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		1EAA600B18E7BB0E0059A23F /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		1EAA600E18E7C7B80059A23F /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		1EAA600F18E7C7B80059A23F /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		1EAA601018E7C7B80059A23F /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		1EAA5FD718E7B8B50059A23F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EAA600D18E7C7B80059A23F /* BLE */,
 				1EAA5FD818E7B8B50059A23F /* Foundation.framework */,
 				1EAA5FDA18E7B8B50059A23F /* CoreGraphics.framework */,
 				1EAA5FDC18E7B8B50059A23F /* UIKit.framework */,
@@ -152,6 +157,16 @@
 				1EAA5FFA18E7B8B50059A23F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1EAA600D18E7C7B80059A23F /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				1EAA600E18E7C7B80059A23F /* BLE.h */,
+				1EAA600F18E7C7B80059A23F /* BLE.m */,
+				1EAA601018E7C7B80059A23F /* BLEDefines.h */,
+			);
+			path = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +267,7 @@
 				1EAA600C18E7BB0E0059A23F /* UIView+Additions.m in Sources */,
 				1EAA5FE918E7B8B50059A23F /* AppDelegate.m in Sources */,
 				1EAA5FE518E7B8B50059A23F /* main.m in Sources */,
+				1EAA601118E7C7B80059A23F /* BLE.m in Sources */,
 				1EAA600918E7B8C90059A23F /* DriveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
