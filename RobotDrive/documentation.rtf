@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12000\viewh11200\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Item\'92s used\
+- Robot chasis.\
+- Wheels. (2 or 4)\
+- DC motors with gearbox. (2 or 4)\
+- Arduino boards (2). One for working with BLE shield and other to work with Motor shield.\
+- Motor shield to drive 2 DC motors.\
+- BLE shield to read bluetooth data.\
+- Wires.\
+- 9 V batteries (2)\
+\
+Steps\
+1 - Attach wheels with DC motor gearbox to Robot chassis.\
+2 - Place motor shield on first Arduino board. \
+3 - Use motor shield to drive DC motor connected to wheels.\
+{\field{\*\fldinst{HYPERLINK "http://www.instructables.com/id/Arduino-Motor-Shield-Tutorial/"}}{\fldrslt http://www.instructables.com/id/Arduino-Motor-Shield-Tutorial/}}\
+4 - Place BLE shield on second Arduino board.\
+{\field{\*\fldinst{HYPERLINK "http://redbearlab.com/bleshield/"}}{\fldrslt http://redbearlab.com/bleshield/}}\
+{\field{\*\fldinst{HYPERLINK "https://github.com/RedBearLab/"}}{\fldrslt https://github.com/RedBearLab/}}\
+5 - Create iPhone project to send BLE data to BLE shield.\
+6 - Connect these two Arduino boards in I2C, sharing a single bus. \
+{\field{\*\fldinst{HYPERLINK "http://arduino.cc/en/Tutorial/MasterWriter"}}{\fldrslt http://arduino.cc/en/Tutorial/MasterWriter}}\
+7 - Assign Arduino board with BLE as master and Arduino board with BLE as slave.\
+8 - Read BLE commands and send them to motor board to run the car.\
+}
