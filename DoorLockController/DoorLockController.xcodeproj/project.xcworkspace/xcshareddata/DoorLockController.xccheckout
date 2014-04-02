@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BEBE1F63-4C02-4A05-AE61-0C63352F10C6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DoorLockController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E8D64BE2-1C60-445A-9F99-E7DC2F706864</key>
+		<string>https://github.com/runrunrun/Arduino.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DoorLockController/DoorLockController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E8D64BE2-1C60-445A-9F99-E7DC2F706864</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/runrunrun/Arduino.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E8D64BE2-1C60-445A-9F99-E7DC2F706864</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E8D64BE2-1C60-445A-9F99-E7DC2F706864</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Arduino</string>
+		</dict>
+	</array>
+</dict>
+</plist>
