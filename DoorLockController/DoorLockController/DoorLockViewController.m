@@ -120,10 +120,20 @@
 - (void)lockSwitched:(id)sender
 {
     if (_lockSwitch.on) {
+        NSLog(@"Unlock");
         
+        UInt8 buf[3] = {0x00, 0x00, 0x00};
+        
+        NSData *data = [[NSData alloc] initWithBytes:buf length:3];
+        [_ble write:data];
     }
     else {
+        NSLog(@"Lock");
         
+        UInt8 buf[3] = {0x01, 0x00, 0x00};
+        
+        NSData *data = [[NSData alloc] initWithBytes:buf length:3];
+        [_ble write:data];
     }
 }
 
